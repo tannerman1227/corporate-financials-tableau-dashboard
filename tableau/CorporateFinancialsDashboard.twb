@@ -1,0 +1,2100 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook original-version='18.1' source-build='2024.2.0 (20242.24.0709.1612)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Annual Financials' inline='true' name='federated.annual' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='company_financials_annual.csv' name='textscan.federated.annual'>
+            <connection class='textscan' directory='../data' filename='company_financials_annual.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.federated.annual' name='company_financials_annual.csv' table='[company_financials_annual#csv]' type='table'>
+          <columns>
+            <column datatype='string' name='ticker' ordinal='0' />
+            <column datatype='string' name='display_name' ordinal='1' />
+            <column datatype='string' name='company_name' ordinal='2' />
+            <column datatype='string' name='cik' ordinal='3' />
+            <column datatype='integer' name='fiscal_year' ordinal='4' />
+            <column datatype='integer' name='year_ended' ordinal='5' />
+            <column datatype='date' name='period_start' ordinal='6' />
+            <column datatype='date' name='period_end' ordinal='7' />
+            <column datatype='integer' name='days_in_period' ordinal='8' />
+            <column datatype='real' name='revenue_usd' ordinal='9' />
+            <column datatype='real' name='cost_of_revenue_usd' ordinal='10' />
+            <column datatype='real' name='gross_profit_usd' ordinal='11' />
+            <column datatype='real' name='operating_income_usd' ordinal='12' />
+            <column datatype='real' name='net_income_usd' ordinal='13' />
+            <column datatype='real' name='operating_cash_flow_usd' ordinal='14' />
+            <column datatype='string' name='gross_profit_method' ordinal='15' />
+            <column datatype='string' name='revenue_xbrl_tag' ordinal='16' />
+            <column datatype='string' name='cost_xbrl_tag' ordinal='17' />
+            <column datatype='string' name='gross_profit_xbrl_tag' ordinal='18' />
+            <column datatype='string' name='operating_income_xbrl_tag' ordinal='19' />
+            <column datatype='string' name='net_income_xbrl_tag' ordinal='20' />
+            <column datatype='string' name='ocf_xbrl_tag' ordinal='21' />
+            <column datatype='string' name='source_form' ordinal='22' />
+            <column datatype='date' name='filed_date' ordinal='23' />
+            <column datatype='string' name='accession_number' ordinal='24' />
+            <column datatype='string' name='value_is_restated' ordinal='25' />
+            <column datatype='string' name='companyfacts_url' ordinal='26' />
+            <column datatype='string' name='filing_index_url' ordinal='27' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>display_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[display_name]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>display_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_name]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>company_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cik</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cik]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>cik</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fiscal_year]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>fiscal_year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_ended</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year_ended]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>year_ended</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period_start]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>period_start</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_end</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period_end]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>period_end</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days_in_period</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days_in_period]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>days_in_period</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>revenue_usd</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_of_revenue_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_of_revenue_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>cost_of_revenue_usd</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gross_profit_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>gross_profit_usd</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_income_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[operating_income_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>operating_income_usd</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_income_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>net_income_usd</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_cash_flow_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[operating_cash_flow_usd]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>operating_cash_flow_usd</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gross_profit_method]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>gross_profit_method</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[revenue_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>revenue_xbrl_tag</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cost_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>cost_xbrl_tag</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gross_profit_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>gross_profit_xbrl_tag</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[operating_income_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>operating_income_xbrl_tag</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[net_income_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>net_income_xbrl_tag</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ocf_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ocf_xbrl_tag]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>ocf_xbrl_tag</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_form</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source_form]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>source_form</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>filed_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[filed_date]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>filed_date</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accession_number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[accession_number]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>accession_number</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value_is_restated</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[value_is_restated]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>value_is_restated</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>companyfacts_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[companyfacts_url]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>companyfacts_url</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>filing_index_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[filing_index_url]</local-name>
+            <parent-name>[company_financials_annual.csv]</parent-name>
+            <remote-alias>filing_index_url</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_annual.csv]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[company_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cik]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[fiscal_year]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+      <column datatype='date' name='[period_start]' role='dimension' type='ordinal' />
+      <column datatype='date' name='[period_end]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[days_in_period]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[revenue_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[cost_of_revenue_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[gross_profit_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[operating_income_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[net_income_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[operating_cash_flow_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='string' name='[gross_profit_method]' role='dimension' type='nominal' />
+      <column datatype='string' name='[revenue_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cost_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[gross_profit_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[operating_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[net_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[ocf_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[source_form]' role='dimension' type='nominal' />
+      <column datatype='date' name='[filed_date]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[accession_number]' role='dimension' type='nominal' />
+      <column datatype='string' name='[value_is_restated]' role='dimension' type='nominal' />
+      <column datatype='string' name='[companyfacts_url]' role='dimension' type='nominal' />
+      <column datatype='string' name='[filing_index_url]' role='dimension' type='nominal' />
+      <column caption='YoY Revenue Growth %' datatype='real' name='[YoY Revenue Growth %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='(ZN(SUM([revenue_usd])) - LOOKUP(ZN(SUM([revenue_usd])), -1)) / ABS(LOOKUP(ZN(SUM([revenue_usd])), -1))' />
+      </column>
+      <column caption='Gross Margin %' datatype='real' name='[Gross Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([gross_profit_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Operating Margin %' datatype='real' name='[Operating Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([operating_income_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Net Margin %' datatype='real' name='[Net Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([net_income_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Margin Change bps' datatype='real' name='[Margin Change bps]' role='measure' type='quantitative' default-format='+#,##0;-#,##0'>
+        <calculation class='tableau' formula='(ZN([Operating Margin %]) - LOOKUP(ZN([Operating Margin %]), -1)) * 10000' />
+      </column>
+      <column caption='Latest Year Flag' datatype='boolean' name='[Latest Year Flag]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[year_ended] = { FIXED [ticker] : MAX([year_ended]) }' />
+      </column>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+    <datasource caption='Quarterly Financials' inline='true' name='federated.quarterly' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='company_financials_quarterly.csv' name='textscan.federated.quarterly'>
+            <connection class='textscan' directory='../data' filename='company_financials_quarterly.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.federated.quarterly' name='company_financials_quarterly.csv' table='[company_financials_quarterly#csv]' type='table'>
+          <columns>
+            <column datatype='string' name='ticker' ordinal='0' />
+            <column datatype='string' name='display_name' ordinal='1' />
+            <column datatype='string' name='company_name' ordinal='2' />
+            <column datatype='string' name='cik' ordinal='3' />
+            <column datatype='integer' name='fiscal_year' ordinal='4' />
+            <column datatype='string' name='fiscal_quarter' ordinal='5' />
+            <column datatype='integer' name='year_ended' ordinal='6' />
+            <column datatype='date' name='period_start' ordinal='7' />
+            <column datatype='date' name='period_end' ordinal='8' />
+            <column datatype='integer' name='days_in_period' ordinal='9' />
+            <column datatype='real' name='revenue_usd' ordinal='10' />
+            <column datatype='real' name='cost_of_revenue_usd' ordinal='11' />
+            <column datatype='real' name='gross_profit_usd' ordinal='12' />
+            <column datatype='real' name='operating_income_usd' ordinal='13' />
+            <column datatype='real' name='net_income_usd' ordinal='14' />
+            <column datatype='real' name='operating_cash_flow_usd' ordinal='15' />
+            <column datatype='string' name='value_basis' ordinal='16' />
+            <column datatype='string' name='derivation' ordinal='17' />
+            <column datatype='string' name='gross_profit_method' ordinal='18' />
+            <column datatype='string' name='revenue_xbrl_tag' ordinal='19' />
+            <column datatype='string' name='cost_xbrl_tag' ordinal='20' />
+            <column datatype='string' name='gross_profit_xbrl_tag' ordinal='21' />
+            <column datatype='string' name='operating_income_xbrl_tag' ordinal='22' />
+            <column datatype='string' name='net_income_xbrl_tag' ordinal='23' />
+            <column datatype='string' name='ocf_xbrl_tag' ordinal='24' />
+            <column datatype='string' name='source_form' ordinal='25' />
+            <column datatype='date' name='filed_date' ordinal='26' />
+            <column datatype='string' name='accession_number' ordinal='27' />
+            <column datatype='string' name='value_is_restated' ordinal='28' />
+            <column datatype='string' name='companyfacts_url' ordinal='29' />
+            <column datatype='string' name='filing_index_url' ordinal='30' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>display_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[display_name]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>display_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_name]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>company_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cik</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cik]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>cik</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fiscal_year]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>fiscal_year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_quarter</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fiscal_quarter]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>fiscal_quarter</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_ended</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year_ended]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>year_ended</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period_start]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>period_start</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period_end</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period_end]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>period_end</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days_in_period</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days_in_period]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>days_in_period</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>revenue_usd</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_of_revenue_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_of_revenue_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>cost_of_revenue_usd</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gross_profit_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>gross_profit_usd</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_income_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[operating_income_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>operating_income_usd</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_income_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>net_income_usd</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_cash_flow_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[operating_cash_flow_usd]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>operating_cash_flow_usd</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value_basis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[value_basis]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>value_basis</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>derivation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[derivation]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>derivation</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gross_profit_method]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>gross_profit_method</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[revenue_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>revenue_xbrl_tag</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cost_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>cost_xbrl_tag</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gross_profit_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>gross_profit_xbrl_tag</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[operating_income_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>operating_income_xbrl_tag</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[net_income_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>net_income_xbrl_tag</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ocf_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ocf_xbrl_tag]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>ocf_xbrl_tag</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_form</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source_form]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>source_form</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>filed_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[filed_date]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>filed_date</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accession_number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[accession_number]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>accession_number</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value_is_restated</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[value_is_restated]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>value_is_restated</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>companyfacts_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[companyfacts_url]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>companyfacts_url</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>filing_index_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[filing_index_url]</local-name>
+            <parent-name>[company_financials_quarterly.csv]</parent-name>
+            <remote-alias>filing_index_url</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[company_financials_quarterly.csv]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[company_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cik]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[fiscal_year]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[fiscal_quarter]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+      <column datatype='date' name='[period_start]' role='dimension' type='ordinal' />
+      <column datatype='date' name='[period_end]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[days_in_period]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[revenue_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[cost_of_revenue_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[gross_profit_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[operating_income_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[net_income_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='real' name='[operating_cash_flow_usd]' default-format='$#,##0,,.0' role='measure' type='quantitative' />
+      <column datatype='string' name='[value_basis]' role='dimension' type='nominal' />
+      <column datatype='string' name='[derivation]' role='dimension' type='nominal' />
+      <column datatype='string' name='[gross_profit_method]' role='dimension' type='nominal' />
+      <column datatype='string' name='[revenue_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cost_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[gross_profit_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[operating_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[net_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[ocf_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[source_form]' role='dimension' type='nominal' />
+      <column datatype='date' name='[filed_date]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[accession_number]' role='dimension' type='nominal' />
+      <column datatype='string' name='[value_is_restated]' role='dimension' type='nominal' />
+      <column datatype='string' name='[companyfacts_url]' role='dimension' type='nominal' />
+      <column datatype='string' name='[filing_index_url]' role='dimension' type='nominal' />
+      <column caption='YoY Revenue Growth %' datatype='real' name='[YoY Revenue Growth %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='(ZN(SUM([revenue_usd])) - LOOKUP(ZN(SUM([revenue_usd])), -4)) / ABS(LOOKUP(ZN(SUM([revenue_usd])), -4))' />
+      </column>
+      <column caption='Gross Margin %' datatype='real' name='[Gross Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([gross_profit_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Operating Margin %' datatype='real' name='[Operating Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([operating_income_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Net Margin %' datatype='real' name='[Net Margin %]' role='measure' type='quantitative' default-format='0.0%'>
+        <calculation class='tableau' formula='SUM([net_income_usd]) / SUM([revenue_usd])' />
+      </column>
+      <column caption='Margin Change bps' datatype='real' name='[Margin Change bps]' role='measure' type='quantitative' default-format='+#,##0;-#,##0'>
+        <calculation class='tableau' formula='(ZN([Operating Margin %]) - LOOKUP(ZN([Operating Margin %]), -4)) * 10000' />
+      </column>
+      <column caption='TTM Revenue' datatype='real' name='[TTM Revenue]' role='measure' type='quantitative' default-format='$#,##0,,.0'>
+        <calculation class='tableau' formula='WINDOW_SUM(SUM([revenue_usd]), -3, 0)' />
+      </column>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+    <datasource caption='Company Directory' inline='true' name='federated.dim' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dim_company.csv' name='textscan.federated.dim'>
+            <connection class='textscan' directory='../data' filename='dim_company.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.federated.dim' name='dim_company.csv' table='[dim_company#csv]' type='table'>
+          <columns>
+            <column datatype='string' name='ticker' ordinal='0' />
+            <column datatype='string' name='display_name' ordinal='1' />
+            <column datatype='string' name='company_name' ordinal='2' />
+            <column datatype='string' name='sec_entity_name' ordinal='3' />
+            <column datatype='string' name='cik' ordinal='4' />
+            <column datatype='integer' name='sic' ordinal='5' />
+            <column datatype='string' name='sic_description' ordinal='6' />
+            <column datatype='string' name='exchange' ordinal='7' />
+            <column datatype='string' name='fiscal_year_end' ordinal='8' />
+            <column datatype='string' name='headquarters_city' ordinal='9' />
+            <column datatype='string' name='headquarters_state' ordinal='10' />
+            <column datatype='string' name='business' ordinal='11' />
+            <column datatype='string' name='peer_group' ordinal='12' />
+            <column datatype='string' name='revenue_xbrl_tag' ordinal='13' />
+            <column datatype='string' name='cost_xbrl_tag' ordinal='14' />
+            <column datatype='string' name='gross_profit_xbrl_tag' ordinal='15' />
+            <column datatype='string' name='operating_income_xbrl_tag' ordinal='16' />
+            <column datatype='string' name='net_income_xbrl_tag' ordinal='17' />
+            <column datatype='string' name='ocf_xbrl_tag' ordinal='18' />
+            <column datatype='string' name='companyfacts_url' ordinal='19' />
+            <column datatype='string' name='submissions_url' ordinal='20' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ticker</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ticker]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>ticker</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>display_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[display_name]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>display_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company_name]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>company_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_entity_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sec_entity_name]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>sec_entity_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cik</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cik]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>cik</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sic</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sic]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>sic</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sic_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sic_description]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>sic_description</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exchange</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[exchange]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>exchange</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_year_end</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fiscal_year_end]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>fiscal_year_end</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>headquarters_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[headquarters_city]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>headquarters_city</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>headquarters_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[headquarters_state]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>headquarters_state</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[business]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>business</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>peer_group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[peer_group]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>peer_group</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[revenue_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>revenue_xbrl_tag</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cost_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>cost_xbrl_tag</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gross_profit_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>gross_profit_xbrl_tag</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[operating_income_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>operating_income_xbrl_tag</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[net_income_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>net_income_xbrl_tag</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ocf_xbrl_tag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ocf_xbrl_tag]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>ocf_xbrl_tag</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>companyfacts_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[companyfacts_url]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>companyfacts_url</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>submissions_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[submissions_url]</local-name>
+            <parent-name>[dim_company.csv]</parent-name>
+            <remote-alias>submissions_url</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[dim_company.csv]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[ticker]' role='dimension' type='nominal' />
+      <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[company_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[sec_entity_name]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cik]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[sic]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[sic_description]' role='dimension' type='nominal' />
+      <column datatype='string' name='[exchange]' role='dimension' type='nominal' />
+      <column datatype='string' name='[fiscal_year_end]' role='dimension' type='nominal' />
+      <column datatype='string' name='[headquarters_city]' role='dimension' type='nominal' />
+      <column datatype='string' name='[headquarters_state]' role='dimension' type='nominal' />
+      <column datatype='string' name='[business]' role='dimension' type='nominal' />
+      <column datatype='string' name='[peer_group]' role='dimension' type='nominal' />
+      <column datatype='string' name='[revenue_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[cost_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[gross_profit_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[operating_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[net_income_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[ocf_xbrl_tag]' role='dimension' type='nominal' />
+      <column datatype='string' name='[companyfacts_url]' role='dimension' type='nominal' />
+      <column datatype='string' name='[submissions_url]' role='dimension' type='nominal' />
+
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Revenue Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[revenue_usd]' role='measure' type='quantitative' />
+    <column-instance column='[revenue_usd]' derivation='Sum' name='[sum:revenue_usd:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[sum:revenue_usd:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='YoY Revenue Growth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='YoY Revenue Growth %' datatype='real' name='[YoY Revenue Growth %]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(ZN(SUM([revenue_usd])) - LOOKUP(ZN(SUM([revenue_usd])), -1)) / ABS(LOOKUP(ZN(SUM([revenue_usd])), -1))' />
+            </column>
+    <column-instance column='[YoY Revenue Growth %]' derivation='User' name='[usr:YoY Revenue Growth %:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[usr:YoY Revenue Growth %:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Gross Margin Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='Gross Margin %' datatype='real' name='[Gross Margin %]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([gross_profit_usd]) / SUM([revenue_usd])' />
+            </column>
+    <column-instance column='[Gross Margin %]' derivation='User' name='[usr:Gross Margin %:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[usr:Gross Margin %:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Operating Margin Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='Operating Margin %' datatype='real' name='[Operating Margin %]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([operating_income_usd]) / SUM([revenue_usd])' />
+            </column>
+    <column-instance column='[Operating Margin %]' derivation='User' name='[usr:Operating Margin %:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[usr:Operating Margin %:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Net Margin Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='Net Margin %' datatype='real' name='[Net Margin %]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([net_income_usd]) / SUM([revenue_usd])' />
+            </column>
+    <column-instance column='[Net Margin %]' derivation='User' name='[usr:Net Margin %:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[usr:Net Margin %:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Margin Change'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='Margin Change bps' datatype='real' name='[Margin Change bps]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(ZN([Operating Margin %]) - LOOKUP(ZN([Operating Margin %]), -1)) * 10000' />
+            </column>
+    <column-instance column='[Margin Change bps]' derivation='User' name='[usr:Margin Change bps:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[usr:Margin Change bps:qk]</rows>
+        <cols>[federated.annual].[none:year_ended:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='TTM Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Quarterly Financials' name='federated.quarterly' />
+          </datasources>
+          <datasource-dependencies datasource='federated.quarterly'>
+            <column datatype='date' name='[period_end]' role='dimension' type='ordinal' />
+    <column-instance column='[period_end]' derivation='None' name='[none:period_end:ok]' pivot='key' type='ordinal' />
+            <column caption='TTM Revenue' datatype='real' name='[TTM Revenue]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_SUM(SUM([revenue_usd]), -3, 0)' />
+            </column>
+    <column-instance column='[TTM Revenue]' derivation='User' name='[usr:TTM Revenue:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.quarterly].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.quarterly].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.quarterly].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.quarterly].[usr:TTM Revenue:qk]</rows>
+        <cols>[federated.quarterly].[none:period_end:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Latest Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[revenue_usd]' role='measure' type='quantitative' />
+    <column-instance column='[revenue_usd]' derivation='Sum' name='[sum:revenue_usd:qk]' pivot='key' type='quantitative' />
+            <column caption='Latest Year Flag' datatype='boolean' name='[Latest Year Flag]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[year_ended] = { FIXED [ticker] : MAX([year_ended]) }' />
+            </column>
+    <column-instance column='[Latest Year Flag]' derivation='None' name='[none:Latest Year Flag:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <filter class='categorical' column='[federated.annual].[none:Latest Year Flag:nk]'>
+              <groupfilter function='member' level='[none:Latest Year Flag:nk]' member='true' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[none:display_name:nk]</rows>
+        <cols>([federated.annual].[none:year_ended:ok] * [federated.annual].[sum:revenue_usd:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Latest Operating Margin'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column caption='Operating Margin %' datatype='real' name='[Operating Margin %]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([operating_income_usd]) / SUM([revenue_usd])' />
+            </column>
+    <column-instance column='[Operating Margin %]' derivation='User' name='[usr:Operating Margin %:qk]' pivot='key' type='quantitative' />
+            <column caption='Latest Year Flag' datatype='boolean' name='[Latest Year Flag]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[year_ended] = { FIXED [ticker] : MAX([year_ended]) }' />
+            </column>
+    <column-instance column='[Latest Year Flag]' derivation='None' name='[none:Latest Year Flag:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <filter class='categorical' column='[federated.annual].[none:Latest Year Flag:nk]'>
+              <groupfilter function='member' level='[none:Latest Year Flag:nk]' member='true' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[none:display_name:nk]</rows>
+        <cols>([federated.annual].[none:year_ended:ok] * [federated.annual].[usr:Operating Margin %:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Latest Net Income'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[net_income_usd]' role='measure' type='quantitative' />
+    <column-instance column='[net_income_usd]' derivation='Sum' name='[sum:net_income_usd:qk]' pivot='key' type='quantitative' />
+            <column caption='Latest Year Flag' datatype='boolean' name='[Latest Year Flag]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[year_ended] = { FIXED [ticker] : MAX([year_ended]) }' />
+            </column>
+    <column-instance column='[Latest Year Flag]' derivation='None' name='[none:Latest Year Flag:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <filter class='categorical' column='[federated.annual].[none:Latest Year Flag:nk]'>
+              <groupfilter function='member' level='[none:Latest Year Flag:nk]' member='true' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[none:display_name:nk]</rows>
+        <cols>([federated.annual].[none:year_ended:ok] * [federated.annual].[sum:net_income_usd:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Latest Cash Flow'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Annual Financials' name='federated.annual' />
+          </datasources>
+          <datasource-dependencies datasource='federated.annual'>
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[year_ended]' role='dimension' type='ordinal' />
+    <column-instance column='[year_ended]' derivation='None' name='[none:year_ended:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[operating_cash_flow_usd]' role='measure' type='quantitative' />
+    <column-instance column='[operating_cash_flow_usd]' derivation='Sum' name='[sum:operating_cash_flow_usd:qk]' pivot='key' type='quantitative' />
+            <column caption='Latest Year Flag' datatype='boolean' name='[Latest Year Flag]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[year_ended] = { FIXED [ticker] : MAX([year_ended]) }' />
+            </column>
+    <column-instance column='[Latest Year Flag]' derivation='None' name='[none:Latest Year Flag:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.annual].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <filter class='categorical' column='[federated.annual].[none:Latest Year Flag:nk]'>
+              <groupfilter function='member' level='[none:Latest Year Flag:nk]' member='true' />
+            </filter>
+            <slices>
+              <column>[federated.annual].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.annual].[none:display_name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.annual].[none:display_name:nk]</rows>
+        <cols>([federated.annual].[none:year_ended:ok] * [federated.annual].[sum:operating_cash_flow_usd:qk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Company List'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Company Directory' name='federated.dim' />
+          </datasources>
+          <datasource-dependencies datasource='federated.dim'>
+            <column datatype='string' name='[display_name]' role='dimension' type='nominal' />
+    <column-instance column='[display_name]' derivation='None' name='[none:display_name:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[business]' role='dimension' type='nominal' />
+    <column-instance column='[business]' derivation='None' name='[none:business:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[headquarters_city]' role='dimension' type='nominal' />
+    <column-instance column='[headquarters_city]' derivation='None' name='[none:headquarters_city:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+            <filter class='categorical' column='[federated.dim].[none:display_name:nk]'>
+              <groupfilter function='level-members' level='[none:display_name:nk]' />
+            </filter>
+            <slices>
+              <column>[federated.dim].[none:display_name:nk]</column>
+            </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.dim].[none:display_name:nk] / [federated.dim].[none:business:nk] / [federated.dim].[none:headquarters_city:nk])</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Executive Overview'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f4f7fb' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+        <zone h='7000' id='2' type-v2='text' w='100000' x='0' y='0'>
+          <formatted-text>
+            <run fontcolor='#102033' fontsize='16'>Executive Overview</run>
+          </formatted-text>
+        </zone>
+        <zone h='46000' id='3' name='Revenue Trend' w='62000' x='0' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='46000' id='4' name='YoY Revenue Growth' w='38000' x='62000' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='5' name='Latest Revenue' w='50000' x='0' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='6' name='Latest Operating Margin' w='50000' x='50000' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Revenue &amp; Growth'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f4f7fb' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+        <zone h='7000' id='2' type-v2='text' w='100000' x='0' y='0'>
+          <formatted-text>
+            <run fontcolor='#102033' fontsize='16'>Revenue &amp; Growth</run>
+          </formatted-text>
+        </zone>
+        <zone h='93000' id='3' name='Revenue Trend' w='64000' x='0' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='46000' id='4' name='YoY Revenue Growth' w='36000' x='64000' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='5' name='TTM Revenue' w='36000' x='64000' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Profitability &amp; Margins'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f4f7fb' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+        <zone h='7000' id='2' type-v2='text' w='100000' x='0' y='0'>
+          <formatted-text>
+            <run fontcolor='#102033' fontsize='16'>Profitability &amp; Margins</run>
+          </formatted-text>
+        </zone>
+        <zone h='46000' id='3' name='Gross Margin Trend' w='34000' x='0' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='46000' id='4' name='Operating Margin Trend' w='33000' x='34000' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='46000' id='5' name='Net Margin Trend' w='33000' x='67000' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='6' name='Margin Change' w='100000' x='0' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Peer Comparison'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f4f7fb' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1400' minheight='900' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+        <zone h='7000' id='2' type-v2='text' w='100000' x='0' y='0'>
+          <formatted-text>
+            <run fontcolor='#102033' fontsize='16'>Peer Comparison</run>
+          </formatted-text>
+        </zone>
+        <zone h='46000' id='3' name='Latest Revenue' w='50000' x='0' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='46000' id='4' name='Latest Operating Margin' w='50000' x='50000' y='7000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='5' name='Latest Net Income' w='34000' x='0' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='6' name='Latest Cash Flow' w='33000' x='34000' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        <zone h='47000' id='7' name='Company List' w='33000' x='67000' y='53000'>
+          <layout-cache minheight='120' minwidth='160' type-h='scalable' type-v='scalable' />
+        </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' name='Executive Overview'>
+      <viewpoints>
+        <viewpoint name='Revenue Trend' />
+        <viewpoint name='YoY Revenue Growth' />
+        <viewpoint name='Latest Revenue' />
+        <viewpoint name='Latest Operating Margin' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Revenue &amp; Growth'>
+      <viewpoints>
+        <viewpoint name='Revenue Trend' />
+        <viewpoint name='YoY Revenue Growth' />
+        <viewpoint name='TTM Revenue' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Profitability &amp; Margins'>
+      <viewpoints>
+        <viewpoint name='Gross Margin Trend' />
+        <viewpoint name='Operating Margin Trend' />
+        <viewpoint name='Net Margin Trend' />
+        <viewpoint name='Margin Change' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Peer Comparison'>
+      <viewpoints>
+        <viewpoint name='Latest Revenue' />
+        <viewpoint name='Latest Operating Margin' />
+        <viewpoint name='Latest Net Income' />
+        <viewpoint name='Latest Cash Flow' />
+        <viewpoint name='Company List' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' name='Revenue Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='YoY Revenue Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Gross Margin Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Operating Margin Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Net Margin Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Margin Change'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='TTM Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Latest Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Latest Operating Margin'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Latest Net Income'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Latest Cash Flow'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Company List'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
